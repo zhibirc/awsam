@@ -2,6 +2,9 @@
 
 Manage AWS profiles from CLI with AWS **A**ccount **M**anager
 
+![Maintenance](https://img.shields.io/maintenance/yes/2022?style=for-the-badge)
+![Platform](https://img.shields.io/badge/OS-GNU%2FLinux-yellowgreen.svg?style=for-the-badge)
+![Platform](https://img.shields.io/badge/macOS-yellowgreen.svg?style=for-the-badge)
 ---
 
 ## Setup

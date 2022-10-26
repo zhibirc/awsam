@@ -16,7 +16,13 @@ USER_ENV_FILE="$HOME"/bin/.env
 
 printf "%b" "${BOLD_CYAN}\nThe following AWS profiles found:\n\n${STYLE_RESET}"
 
-readarray -t existing_profiles < <(aws configure list-profiles)
+if command -v readarray &> /dev/null; then
+  readarray -t existing_profiles < <(aws configure list-profiles)
+else
+  # mostly for zsh shell
+  while IFS= read -r line; do existing_profiles+=("$line"); done < <(aws configure list-profiles)
+fi
+
 profile_name=''
 
 PS3="Please, choose AWS profile to use: "
